@@ -5,17 +5,17 @@ function getCaseNum() {
     return caseNumber;
 }
 
-function updateCaseNumber(isIncrease) {
+function updateProductNumber(isIncrease) {
     const caseNumberInput = document.getElementById('case-number');
     const caseNumber = getCaseNum();
     if (isIncrease == true) {
         const totalCase = caseNumber + 1;
         caseNumberInput.value = totalCase;
     } else if (caseNumber > 0) {
-       const totalCase = caseNumber - 1;
-       caseNumberInput.value = totalCase;
+        const totalCase = caseNumber - 1;
+        caseNumberInput.value = totalCase;
     }
-  
+
 
 }
 
@@ -33,7 +33,7 @@ function uupdatePrince(itemAmount) {
 }
 
 document.getElementById('case-plus').addEventListener('click', () => {
-    const itemAmount = updateCaseNumber(true);
+    const itemAmount = updateProductNumber(true);
     // console.log(itemAmount);
     const caseNumber = getCaseNum();
     uupdatePrince(caseNumber);
@@ -42,6 +42,6 @@ document.getElementById('case-plus').addEventListener('click', () => {
 
 // neg btn
 document.getElementById('case-negetive').addEventListener('click', () => {
-    updateCaseNumber(false);
+    updateProductNumber(false);
 
 });
