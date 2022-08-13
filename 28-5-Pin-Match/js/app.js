@@ -50,18 +50,18 @@ document.getElementById('keypad').addEventListener('click', function (event) {
     }
 }); */
 
-function verifyPin(){
+function verifyPin() {
     const typedNumbers = document.getElementById('display-typedNum').value;
-    const generatedPin = document.getElementById('display-pin').value; 
+    const generatedPin = document.getElementById('display-pin').value;
     console.log('typed:', typedNumbers);
     console.log('generated:', generatedPin);
 
     const failed = document.getElementById('notify-failed');
     const success = document.getElementById('notify-success');
-    if(typedNumbers != generatedPin){
+    if (typedNumbers != generatedPin) {
         failed.style.display = 'block';
         success.style.display = 'none';
-    }else{
+    } else {
         success.style.display = 'block';
         failed.style.display = 'none';
 

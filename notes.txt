@@ -1,0 +1,3 @@
+Math.round(Math.random()
+
+const previousNumber = (typedNumbers.value); //this one is string, integer + string = string;   
