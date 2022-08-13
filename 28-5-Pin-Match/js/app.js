@@ -6,8 +6,7 @@ function getPin() {
     } else {
         return getPin();
     }
-
-}
+} // -> recuirtion
 
 
 function generatePin() {
@@ -28,5 +27,43 @@ document.getElementById('keypad').addEventListener('click', function (event) {
         const newNumber = previousNumber + number;
         typedNumbers.value = newNumber;
     }
-
 });
+
+// submit event 
+/* document.getElementById('submit-btn').addEventListener('click', function () {
+    const typedNumbers = document.getElementById('display-typedNum').value;
+    // const pin = getPin();
+    const generatedPin = document.getElementById('display-pin').value;
+    console.log('typed:', typedNumbers);
+    console.log('generated:', generatedPin);
+
+
+    const failed = document.getElementById('notify-failed');
+    const success = document.getElementById('notify-success');
+    if(typedNumbers != generatedPin){
+        failed.style.display = 'block';
+        success.style.display = 'none';
+    }else{
+        success.style.display = 'block';
+        failed.style.display = 'none';
+
+    }
+}); */
+
+function verifyPin(){
+    const typedNumbers = document.getElementById('display-typedNum').value;
+    const generatedPin = document.getElementById('display-pin').value; 
+    console.log('typed:', typedNumbers);
+    console.log('generated:', generatedPin);
+
+    const failed = document.getElementById('notify-failed');
+    const success = document.getElementById('notify-success');
+    if(typedNumbers != generatedPin){
+        failed.style.display = 'block';
+        success.style.display = 'none';
+    }else{
+        success.style.display = 'block';
+        failed.style.display = 'none';
+
+    }
+}
